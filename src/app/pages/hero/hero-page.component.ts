@@ -4,7 +4,7 @@ import { UpperCasePipe } from '@angular/common';
 
 @Component({
   templateUrl: './hero-page.component.html',
-  imports: [ UpperCasePipe ],
+  // imports: [ UpperCasePipe ],
 })
 export class HeroPageComponent {
   name = signal('Ironman');
@@ -12,7 +12,7 @@ export class HeroPageComponent {
 
   heroDescription = computed( () => {
     const description = `${this.name()} - ${this.age()}`;
-    return description
+    return description;
   })
 
   // getHeroDescription() {
