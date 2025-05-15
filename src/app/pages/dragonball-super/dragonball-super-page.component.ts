@@ -11,6 +11,7 @@ interface Character {
   selector: 'dragonball-super',
   imports: [CharacterListComponent],
   templateUrl: './dragonball-super-page.component.html',
+  standalone: true
 })
 export class DragonballSuperPageComponent {
   name = signal('');
