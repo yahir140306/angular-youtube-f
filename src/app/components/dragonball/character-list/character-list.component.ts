@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import type { Character } from '../../../interfaces/character.interface';
 
 @Component({
   standalone: true,
@@ -6,5 +7,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './character-list.component.html',
 })
 export class CharacterListComponent {
-characters: any;
+  characters = input.required<Character[]>();
+  listName = input.required<string>();
 }
